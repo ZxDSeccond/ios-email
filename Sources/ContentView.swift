@@ -14,6 +14,7 @@ struct ContentView: View {
                         Text("🛡️ VIRTUAL DEVICE SPOOFER").font(.headline).foregroundColor(.blue)
                         Text("Engine Anti-Risk Google Signup").font(.subheadline).foregroundColor(.gray)
                     }.padding(.top, 10)
+                    
                     List {
                         Section(header: Text("Hardware Fingerprint")) {
                             IdRowView(title: "ID DEVICE", value: spoofer.deviceId) { spoofer.randomizeDeviceId() }
@@ -42,6 +43,7 @@ struct ContentView: View {
         }
     }
 }
+
 struct IdRowView: View {
     let title: String
     let value: String
@@ -79,6 +81,7 @@ class SpoofEngine: ObservableObject {
     func randomizeModel() { deviceModel = ["Pixel 8 Pro", "Galaxy S24 Ultra", "Redmi Note 13"].randomElement()! }
     func randomizeAdId() { adId = UUID().uuidString }
 }
+
 struct GoogleSignupView: View {
     @ObservedObject var spoofer: SpoofEngine
     @Environment(\.presentationMode) var presentationMode
