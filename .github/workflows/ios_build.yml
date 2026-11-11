@@ -8,5 +8,5 @@ jobs:
     - name: Setup Xcode
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: '15.0'
+        xcode-version: '26.2'
     - run: echo "Ready for iOS build!"
