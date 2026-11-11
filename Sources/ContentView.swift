@@ -69,7 +69,7 @@ class SpoofEngine: ObservableObject {
     func randomizeAll() {
         randomizeDeviceId(); randomizeWifiId(); randomizeBtId(); randomizeMac(); randomizeModel(); randomizeAdId()
     }
-    func randomizeDeviceId() { deviceId = "HOO" + String(Int.random(in: 1000000000..9999999999)) }
+    func randomizeDeviceId() { deviceId = "HOO" + String(Int.random(in: 1000000000...9999999999)) }
     func randomizeWifiId() { wifiId = "WIFI-" + UUID().uuidString.prefix(8).uppercased() }
     func randomizeBtId() { btId = "BT-" + UUID().uuidString.prefix(8).uppercased() }
     func randomizeMac() {
